@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+
+    /* Chart Colors */
+    --chart-1: 221.2 83.2% 53.3%;
+    --chart-2: 262.1 83.3% 57.8%;
+    --chart-3: 316.6 73.3% 52.5%;
+    --chart-4: 43.3 96.4% 56.3%;
+    --chart-5: 19.6 91.1% 54.5%;
+    --chart-6: 173.4 80.4% 40%;
+  }
+
+  .dark {
+    /* Rich dark background with a slight blue tint */
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+
+    /* Slightly lighter card background for contrast */
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    /* Popover styling */
+    --popover: 222 47% 7%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Vibrant primary color that pops on dark backgrounds */
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    /* Secondary colors with better contrast */
+    --secondary: 217.2 32.6% 12%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Muted colors that are still visible */
+    --muted: 217.2 32.6% 12%;
+    --muted-foreground: 215 20.2% 75%;
+
+    /* Accent colors with better visibility */
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    /* Destructive colors that stand out */
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Subtle border color */
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 58%;
+
+    /* Dark specific colors */
+    --dark: 222 47% 5%;
+    --dark-foreground: 210 40% 98%;
+
+    /* Chart Colors - Vibrant in dark mode */
+    --chart-1: 217.2 91.2% 65.8%;
+    --chart-2: 262.1 83.3% 73%;
+    --chart-3: 316.6 73.3% 67%;
+    --chart-4: 43.3 96.4% 72%;
+    --chart-5: 19.6 91.1% 69%;
+    --chart-6: 173.4 80.4% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Dark mode specific utilities */
+  .dark-card {
+    @apply dark:bg-gradient-to-b dark:from-zinc-800/40 dark:to-zinc-900/60 dark:border-zinc-800/60 dark:shadow-dark-card dark:backdrop-blur-sm;
+  }
+
+  .dark-card-hover {
+    @apply dark:hover:bg-gradient-to-b dark:hover:from-zinc-800/60 dark:hover:to-zinc-900/80 dark:hover:border-zinc-700/50 dark:hover:shadow-dark-card-hover;
+  }
+
+  .dark-glow {
+    @apply dark:shadow-dark-glow;
+  }
+
+  .dark-glow-sm {
+    @apply dark:shadow-dark-glow-sm;
+  }
+
+  .dark-glow-lg {
+    @apply dark:shadow-dark-glow-lg;
+  }
+
+  .dark-glow-xl {
+    @apply dark:shadow-dark-glow-xl;
+  }
+
+  .dark-glow-green {
+    @apply dark:shadow-dark-glow-green;
+  }
+
+  .dark-glow-red {
+    @apply dark:shadow-dark-glow-red;
+  }
+
+  .dark-glow-purple {
+    @apply dark:shadow-dark-glow-purple;
+  }
+
+  .dark-glow-amber {
+    @apply dark:shadow-dark-glow-amber;
+  }
+
+  .dark-gradient {
+    @apply dark:bg-dark-gradient;
+  }
+
+  .dark-gradient-radial {
+    @apply dark:bg-dark-gradient-radial;
+  }
+
+  .dark-gradient-card {
+    @apply dark:bg-dark-gradient-card;
+  }
+
+  .dark-gradient-highlight {
+    @apply dark:bg-dark-gradient-highlight;
+  }
+
+  .dark-gradient-green {
+    @apply dark:bg-dark-gradient-green;
+  }
+
+  .dark-gradient-red {
+    @apply dark:bg-dark-gradient-red;
+  }
+
+  .dark-gradient-purple {
+    @apply dark:bg-dark-gradient-purple;
+  }
+
+  .dark-gradient-amber {
+    @apply dark:bg-dark-gradient-amber;
+  }
+
+  .dark-noise {
+    @apply dark:bg-dark-noise;
+  }
+}
+
+/* Custom scrollbar for better UX */
+.dark::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dark::-webkit-scrollbar-track {
+  background: hsl(var(--dark));
+}
+
+.dark::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 4px;
+}
+
+.dark::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
+
+/* Glowing effect for focus in dark mode */
+.dark *:focus-visible {
+  @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background transition-shadow duration-200 shadow-dark-glow-sm;
+}
+
+/* Better table styles for dark mode */
+.dark .table-container {
+  @apply overflow-x-auto bg-gradient-to-b from-zinc-800/40 to-zinc-900/60 rounded-lg;
+}
+
+/* Improved transitions for UI elements in dark mode */
+.dark button,
+.dark a {
+  @apply transition-all duration-200;
+}
+
+/* Better card styles with subtle hover effects for dark mode */
+.dark .card-hover-effect {
+  @apply transition-all duration-300 shadow-dark-card hover:shadow-dark-card-hover;
+}
+
+/* Subtle animation for price changes in dark mode */
+.dark .price-change-up {
+  @apply text-green-400 animate-pulse shadow-dark-glow-green;
+}
+
+.dark .price-change-down {
+  @apply text-red-400 animate-pulse shadow-dark-glow-red;
+}
+
+/* Dark mode specific styles */
+.dark body {
+  @apply bg-dark-gradient-radial bg-dark-crypto-pattern bg-fixed;
+}
+
+.dark .card {
+  @apply dark-card dark-card-hover;
+}
+
+.dark .button {
+  @apply dark-glow hover:dark-glow-lg transition-all duration-300;
+}
+
+.dark .primary-button {
+  @apply bg-primary text-primary-foreground shadow-dark-glow hover:shadow-dark-glow-lg;
+}
+
+.dark .header {
+  @apply bg-gradient-to-b from-zinc-900/90 to-zinc-900/70 backdrop-blur-md border-zinc-800;
+}
+
+.dark .footer {
+  @apply bg-gradient-to-t from-zinc-900/90 to-zinc-900/70 backdrop-blur-md border-zinc-800;
+}
+
+/* Dark mode text enhancements */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4 {
+  @apply text-zinc-50 font-medium;
+}
+
+.dark p {
+  @apply text-zinc-200;
+}
+
+.dark .text-muted-foreground {
+  @apply text-zinc-400;
+}
+
+/* Better padding for mobile in dark mode */
+@media (max-width: 640px) {
+  .dark .container {
+    @apply px-4;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
