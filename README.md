@@ -1,6 +1,6 @@
 # Crypto Tracker
 
-![Crypto Tracker](https://user-images.githubusercontent.com/Jessiejack4/your-repo/main/screenshot.png)
+![Crypto Tracker]((https://drive.google.com/file/d/1EMcAmSMuhcn4ZLvhWwWuvUdHWylExSAE/view?usp=sharing))
 
 A modern, responsive cryptocurrency dashboard built with Next.js and Tailwind CSS. Track real-time cryptocurrency prices, market trends, and manage your personal watchlist.
 
