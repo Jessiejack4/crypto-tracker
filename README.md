@@ -6,7 +6,7 @@ A modern, responsive cryptocurrency dashboard built with Next.js and Tailwind CS
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://crypto-tracker-nextjs.netlify.app) <!-- Replace this URL with your actual Netlify URL once deployed -->
+[View Live Demo](cryptocointracking.netlify.app) <!-- Replace this URL with your actual Netlify URL once deployed -->
 
 ## ✨ Features
 
